@@ -1,0 +1,26 @@
+#gameBoard {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.boardCard {
+    background-color: red;
+    border: 1px solid black;
+    cursor: pointer;
+    /* width: 20px;
+    height: 20px */
+}
+
+.boardCard img {
+    /* width: 20px;
+    height: 20px */
+}
+
+
+.boardCard.flipped {
+    background-color: yellow;
+   
+}

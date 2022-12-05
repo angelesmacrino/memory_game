@@ -1,0 +1,9 @@
+{
+  "name": "memoryGame",
+  "version": "1.0.0",
+  "description": "Simple memory game in js",
+  "main": "index.js",
+  "author": "Angeles Carolina macrino <carolinamacrino@gmail.com>",
+  "license": "MIT"
+
+}
