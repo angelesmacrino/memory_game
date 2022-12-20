@@ -3,36 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + TS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <main class="container mx-auto my-10">
-      <h1>Calculator</h1>
-      <div>
-        <div class="rounded	bg-slate-300 object-center w-[500px] mx-auto p-10">
-          <label for="calculationVisor" aria-label="Result">
-            <input type="text" id="calculationVisor" class="w-full border-2 border-black rounded font-bold px-2" autocomplete="off">
-          </label>
-          <div class="grid grid-cols-5 grid-rows-4">
-            <button class="numberButton col-start-1 ">1</button>
-            <button class="numberButton ">2</button>
-            <button class="numberButton ">3</button>
-            <button class="numberButton col-start-1 ">4</button>
-            <button class="numberButton ">5</button>
-            <button class="numberButton ">6</button>
-            <button class="numberButton col-start-1 ">7</button>
-            <button class="numberButton ">8</button>
-            <button class="numberButton ">9</button>
-            <button class="numberButton col-start-1 ">0</button>
-            <button id="deleteButton" class="eraserButton col-start-4 row-start-1 ">DEL</button>
-            <button id="deleteAllButton" class="eraserButton col-start-5 row-start-1 ">AC</button>
-            <button class="operatorButton col-start-4 row-start-2 ">X</button>
-            <button class="operatorButton col-start-5 row-start-2 ">/</button>
-            <button class="operatorButton col-start-4 row-start-3 ">+</button>
-            <button class="operatorButton col-start-5 row-start-3 ">-</button>
-            <button id="resultButton" class="numberButton col-start-5 row-start-4 ">=</button>
+      <div class="container">
+          <div class="text-center flex flex-row">
+            <h1>Memory Game</h1>
+            <button id="optionsButton" class="ml-2">
+              <i class="fa fa-gear" style="font-size:36px;color:blue"></i>
+            </button>
           </div>
+      </div>
+      <button id="startGameButton"> Start Game </button>
+      <div id="chrono-container" class="float-left">
+        <span id="chrono" class="hidden">00:00:00</span>
+      </div>
+      <div class="flex justify-center align-middle">
+        <div id="gameBoard" class="d-none mx-auto">
+      </div>
+      </div>
+      <button id="scoresButton">Scores</button>
+      <ul id="scoreBoard" class="hidden">
+      </ul>
+      <div id="optionsMenu" class="hidden">
+        <span class="font-bold text-lg">
+          Number of pairs:
+        </span>
+        <div class="flex flex-row justify-between">
+          <label for="html">5<input type="radio" id="html" name="fav_language" value="HTML"></label><br>
+          <label for="html">10 <input type="radio" id="html" name="fav_language" value="HTML"></label><br>
+          <label for="html">15<input type="radio" id="html" name="fav_language" value="HTML"></label><br>
         </div>
       </div>
     </main>

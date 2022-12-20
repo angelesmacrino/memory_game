@@ -2,6 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+button#startGameButton {
+  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  text-transform: uppercase;
+}
+
+button#scoresButton {
+  @apply border-2 font-bold py-2 px-4 rounded mt-1 transition ease-in-out delay-150 border-blue-500 text-blue-500 hover:bg-blue-700 hover:border-blue-700 hover:text-white ;
+  text-transform: uppercase;
+}
+
+#scoreBoard {
+ @apply mt-1 border border-gray-800 max-w-md	rounded-lg shadow-lg p-4 bg-white;
+}
+
+#optionsMenu {
+  @apply border border-gray-800 max-w-md	rounded-lg shadow-lg p-4 bg-white m-auto;
+}
+
+h1 {
+  @apply text-4xl font-bold text-center text-gray-800;
+}
+
+#chrono-container span {
+  font-family: 'Noto Sans Mono', monospace;
+}
   .numberButton,.operatorButton {
     @apply hover:bg-slate-900 active:bg-slate-900 focus:outline-none focus:ring focus:ring-white font-bold text-white bg-slate-500 rounded-md m-2
   }
@@ -9,3 +36,42 @@
   .eraserButton {
     @apply bg-red-600 hover:bg-red-900 active:bg-red-900 rounded-md m-2 focus:outline-none focus:ring focus:ring-white text-white font-bold
   }
+  #gameBoard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    grid-auto-rows: 1fr;
+    width: 250px;
+    align-items: center;
+  justify-items: center;
+}
+
+#gameBoard::before {
+  content: '';
+  width: 0;
+  padding-bottom: 100%;
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+#gameBoard > *:first-child {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+.boardCard {
+    background-color: red;
+    border: 1px solid black;
+    cursor: pointer;
+    width: 50px;
+    height: 50px
+}
+
+.boardCard img {
+    /* width: 20px;
+    height: 20px */
+}
+
+
+.boardCard.flipped {
+    background-color: yellow;
+   
+}
