@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <main class="container mx-auto my-10">
+      <div class="container">
+          <div class="text-center flex flex-row">
+            <h1>Memory Game</h1>
+            <button id="optionsButton" class="ml-2">
+              <i class="fa fa-gear" style="font-size:36px;color:blue"></i>
+            </button>
+          </div>
+      </div>
+      <button id="startGameButton"> Start Game </button>
+      <div id="chrono-container" class="float-left">
+        <span id="chrono" class="hidden">00:00:00</span>
+      </div>
+      <div class="flex justify-center align-middle">
+        <div id="gameBoard" class="d-none mx-auto">
+      </div>
+      </div>
+      <button id="scoresButton">Scores</button>
+      <ul id="scoreBoard" class="hidden">
+      </ul>
+      <div id="optionsMenu" class="hidden">
+        <span class="font-bold text-lg">
+          Number of pairs:
+        </span>
+        <div class="flex flex-row justify-between">
+          <label for="html">5<input type="radio" id="html" name="fav_language" value="HTML"></label><br>
+          <label for="html">10 <input type="radio" id="html" name="fav_language" value="HTML"></label><br>
+          <label for="html">15<input type="radio" id="html" name="fav_language" value="HTML"></label><br>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
