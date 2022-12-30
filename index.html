@@ -14,31 +14,68 @@
     <main class="container mx-auto my-10">
       <div class="container">
           <div class="text-center flex flex-row">
-            <h1>Memory Game</h1>
+            <h1 class="mb-2">Memory Game</h1>
             <button id="optionsButton" class="ml-2">
               <i class="fa fa-gear" style="font-size:36px;color:blue"></i>
             </button>
           </div>
       </div>
-      <button id="startGameButton"> Start Game </button>
-      <div id="chrono-container" class="float-left">
+      <button id="startGameButton" class="py-2 px-4"> Start Game </button>
+      <button id="scoresButton" class="py-2 px-4">Scores</button>
+      <div id="chrono-container" class="float-right">
         <span id="chrono" class="hidden">00:00:00</span>
       </div>
+      <ul id="scoreBoard" class="hidden">
+      </ul>
       <div class="flex justify-center align-middle">
         <div id="gameBoard" class="d-none mx-auto">
       </div>
       </div>
-      <button id="scoresButton">Scores</button>
-      <ul id="scoreBoard" class="hidden">
-      </ul>
       <div id="optionsMenu" class="hidden">
-        <span class="font-bold text-lg">
+        <!-- <span class="font-bold text-lg">
           Number of pairs:
-        </span>
+        </span> -->
         <div class="flex flex-row justify-between">
-          <label for="html">5<input type="radio" id="html" name="fav_language" value="HTML"></label><br>
-          <label for="html">10 <input type="radio" id="html" name="fav_language" value="HTML"></label><br>
-          <label for="html">15<input type="radio" id="html" name="fav_language" value="HTML"></label><br>
+          <form id="optionsForm" class="w-full">
+            <fieldset class="p-2">
+              <legend>Number of tile pairs:</legend>
+              <div id="pairs-container" class="flex justify-around">
+                <label for="5pairs">
+                  <input type="radio" id="5pairs" name="numberOfPairs" value="5" />  
+                  5
+                </label>
+          
+                <label for="10pairs">
+                  <input checked type="radio" id="10pairs" name="numberOfPairs" value="10" />  
+                  10
+                </label>
+                <label for="15pairs">
+                  <input type="radio" id="15pairs" name="numberOfPairs" value="15" />  
+                  15
+                </label>
+              </div>
+            </fieldset>
+            <hr>
+            <fieldset class="p-2">
+              <legend>Card back design:</legend>
+              <div id="back-design-container" class="flex justify-around">
+                <label for="back1">
+                  <input checked class="optionRadioButton" type="radio" id="back1" name="backStyle" value="back1" />  
+                  <img class="option-image" src="./src/card-backs/back1.jpg" alt="">
+                </label>
+                <label for="back2">
+                  <input  class="optionRadioButton" type="radio" id="back2" name="backStyle" value="back2" />  
+                  <img class="option-image" src="./src/card-backs/back2.jpg" alt="">
+                </label>
+                <label for="back3">
+                  <input  class="optionRadioButton" type="radio" id="back3" name="backStyle" value="back3" />  
+                  <img class="option-image" src="./src/card-backs/back3.jpg" alt="">
+                </label>
+              </div>
+            </fieldset>
+            <input id="applyOptionsChanges" type="submit" value="Apply changes" class="float-right mt-5 py-2 px-4">
+            <input id="cancelOptionsChanges" type="reset" value="Cancel" class="float-right mt-5 mr-1 py-2 px-4">
+          </form>
         </div>
       </div>
     </main>
