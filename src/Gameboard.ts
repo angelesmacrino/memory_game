@@ -48,7 +48,13 @@ export class GameBoard {
       })
     }
     private generateNewTile(tileName:string): Tile {
-      return new Tile(tileName, this.options)
+      if (this.options) {
+
+        return new Tile(tileName, this.options)
+      }
+      else {
+        return new Tile(tileName, new Options(10, 'back1', 'fruits'))
+      }
     }
     private generateGameBoard(tiles: Array<Tile>):Array<Tile> {
       let concatenatedTiles = this.appendTiles(tiles)

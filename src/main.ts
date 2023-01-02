@@ -73,17 +73,19 @@ private visualizeChosenOptionsAndToggleScoreboard () {
   const possibleRadioOptionsId = ['5pairs', '10pairs', '15pairs'];
   const possibleCardBacksId = ['back1', 'back2', 'back3'];
   const possibleCardThemesId = ['fruits', 'letters'];
-  this.assignOptionChecked(possibleRadioOptionsId, this.options.getNumberOfPairs);
-  this.assignOptionChecked(possibleCardBacksId, this.options.getBackStyle);
-  this.assignOptionChecked(possibleCardThemesId, this.options.getCardTheme);
+  this.assignOptionChecked(possibleRadioOptionsId, this.options.getNumberOfPairs());
+  this.assignOptionChecked(possibleCardBacksId, this.options.getBackStyle());
+  this.assignOptionChecked(possibleCardThemesId, this.options.getCardTheme());
   this.toggleOptionsMenu();
 }
-private assignOptionChecked (array: string[], func: Function) {
+private assignOptionChecked (array: string[], func: String | number) {
   console.log(func)
   array.forEach((id) => {
-      const option = document.getElementById(id);
-      if (option.value === this.options.func) {
-        option.checked = true;
+      const option = <HTMLInputElement>document.getElementById(id);
+      if (option) {
+        if (option.value === func) {
+          option.checked = true;
+        }
       }
   })
 }
