@@ -55,6 +55,11 @@ private addEventListenerToForm (id:string, func: EventListenerOrEventListenerObj
    private startGame() {
     this.gameBoard.storeChronometerAndScoreBoard(this.chronometer, this.scoreBoard);
     this.toggleDivVisibility('startGameButton');
+    const optionsMenu = document.getElementById('optionsMenu');
+    if (!optionsMenu?.classList.contains('hidden')) {
+      this.toggleDivVisibility('optionsMenu');
+
+    }
     this.gameBoard.populateGameBoard(this.options);
     this.chronoSetup('chrono');
     this.toggleDivVisibility('optionsButton');
