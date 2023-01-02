@@ -36,7 +36,8 @@ export class Tile {
   
     public createTileImage (id=this._id): HTMLImageElement {
       this.tileImage = document.createElement('img')
-      this.tileImage.src = `./src/card-backs/${this.options.getBackStyle()}.jpg`
+      
+      this.tileImage.src = `/assets/card-backs/${this.options.getBackStyle()}.jpg`
       this.tileImage.setAttribute('id', `${id}`)
       return this.tileImage
     }
@@ -57,14 +58,14 @@ export class Tile {
       this.shown = !this.shown
       this.tileImage.src = 
         this.shown 
-          ? `./src/tileSprites/${this.options.getCardTheme()}/${this.letter}.jpg`
-          : `./src/card-backs/${this.options.getBackStyle()}.jpg`;
+          ? `/assets/tileSprites/${this.options.getCardTheme()}/${this.letter}.jpg`
+          : `/assets/card-backs/${this.options.getBackStyle()}.jpg`;
     }
   
     public setSolved () {
       this.solved = true
       if (this.tileImage) {
-        this.tileImage.src = `./src/tileSprites/solved.png`
+        this.tileImage.src = `/assets/tileSprites/solved.png`
       }
     }
   

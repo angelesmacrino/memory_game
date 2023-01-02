@@ -1,5 +1,4 @@
 import './style.css'
-
 import { Chronometer } from './Chronometer'
 import { ScoreBoard } from './ScoreBoard'
 import { GameBoard } from './Gameboard'
