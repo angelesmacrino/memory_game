@@ -12,6 +12,14 @@ vertical-align:middle
   height: 25px;
 }
 
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
 button#startGameButton, input#applyOptionsChanges {
   @apply bg-blue-500 hover:bg-blue-700 text-white font-bold rounded;
   text-transform: uppercase;
