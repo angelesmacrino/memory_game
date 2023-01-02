@@ -11,4 +11,5 @@ When making this project I had the objective of acquiring proficiency on OOP in 
 This was my first attempt at making a complete program made entirely with objects and classes (Vue + Nuxt.js doesn't count, it's all served on a plate for you :p). Hence the design is kinda sloppy (Design patterns, encapsulation? Do you put mayo on that?).
 
 Fruit illustrations by me
+
 [Letter illustrations by Sapann-Design on Freepik](https://www.freepik.com/free-vector/colorful-alphabet_958008.htm#query=alphabet%20letters&position=19&from_view=search&track=sph)
