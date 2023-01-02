@@ -15,7 +15,7 @@ class Main {
     this.gameBoard = new GameBoard();
     this.chronometer = new Chronometer('chrono');
     this.scoreBoard = new ScoreBoard();
-    this.options = new Options(10, 'back1');
+    this.options = new Options(10, 'back1', 'fruits');
   }
   
   public init (): void {
@@ -72,8 +72,10 @@ private addEventListenerToForm (id:string, func: EventListenerOrEventListenerObj
 private visualizeChosenOptionsAndToggleScoreboard () {
   const possibleRadioOptionsId = ['5pairs', '10pairs', '15pairs'];
   const possibleCardBacksId = ['back1', 'back2', 'back3'];
+  const possibleCardThemesId = ['fruits', 'letters'];
   this.assignOptionChecked(possibleRadioOptionsId, this.options.getNumberOfPairs);
   this.assignOptionChecked(possibleCardBacksId, this.options.getBackStyle);
+  this.assignOptionChecked(possibleCardThemesId, this.options.getCardTheme);
   this.toggleOptionsMenu();
 }
 private assignOptionChecked (array: string[], func: Function) {

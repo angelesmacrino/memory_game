@@ -57,7 +57,7 @@ export class Tile {
       this.shown = !this.shown
       this.tileImage.src = 
         this.shown 
-          ? `./src/tileSprites/${this.letter}.png`
+          ? `./src/tileSprites/${this.options.getCardTheme()}/${this.letter}.jpg`
           : `./src/card-backs/${this.options.getBackStyle()}.jpg`;
     }
   
